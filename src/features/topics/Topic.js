@@ -5,10 +5,10 @@ import ROUTES from "../../app/routes";
 // import selectors
 
 import { selectQuizzes } from "../quizzes/quizzesSlice";
-import { selectTopics } from "./topicsSlice"; // Adjust the import path as necessary
+import { selectTopicsArray } from "./topicsSlice"; // Adjust the import path as necessary
 
 export default function Topic() {
-  const topics = useSelector(selectTopics); // replace with selector
+  const topics = useSelector(selectTopicsArray); // replace with selector
   const quizzes = useSelector(selectQuizzes); // replace with selector
   const { topicId } = useParams();
   const topic = topics[topicId];

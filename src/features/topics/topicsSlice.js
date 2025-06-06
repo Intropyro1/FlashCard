@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { createSelector } from "reselect";
 
 const initialState = {
   topics: {},
@@ -45,7 +46,11 @@ const topicSlice = createSlice({
 });
 export const { addTopic, updateTopic, deleteTopic, setTopics } =
   topicSlice.actions;
-export const selectTopics = (state) => Object.values(state.topics.topics);
+export const selectTopics = (state) => state.topics.topics;
+export const selectTopicsArray = createSelector(
+  (state) => state.topics.topics,
+  (topicsObj) => Object.values(topicsObj)
+);
 export const selectTopicById = (state, topicId) => state.topics.topics[topicId];
 export const selectTopicsByQuizId = (state, quizId) =>
   Object.values(state.topics.topics).filter((topic) => topic.quizId === quizId);

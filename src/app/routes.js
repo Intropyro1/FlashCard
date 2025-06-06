@@ -1,11 +1,10 @@
 const ROUTES = {
-    newQuizRoute: () => "/quizzes/new",
-    quizRoute: (id) => `/quizzes/${id}`,
-    quizzesRoute: () => "/quizzes",
-    newTopicRoute: () => "/topics/new",
-    topicRoute: (id) => `/topics/${id}`,
-    topicsRoute: () => "/topics",
-  };
-  
-  export default ROUTES;
-  
+  newQuizRoute: () => "/flashcards/quizzes/new",
+  quizRoute: (id) => `/flashcards/quizzes/${id}`,
+  quizzesRoute: () => "/flashcards/quizzes",
+  newTopicRoute: () => "/flashcards/topics/new",
+  topicRoute: (id) => `/flashcards/topics/${id}`,
+  topicsRoute: () => "/flashcards/topics",
+};
+
+export default ROUTES;
